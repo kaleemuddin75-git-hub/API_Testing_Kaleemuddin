@@ -1,7 +1,10 @@
 # API Testing – ReqRes (Postman)
 
 ## Overview
-This repository contains API testing performed on the ReqRes public API using Postman. The goal was to validate core HTTP operations and understand how the API behaves under both valid and invalid conditions.
+This repository contains API testing performed on the ReqRes public API using Postman. The goal was to validate core HTTP operations and observe API behavior under valid, invalid, and negative scenarios.
+
+## Application Under Test
+ReqRes Public API: https://reqres.in
 
 ## Scope of Testing
 The following API operations were covered:
@@ -12,39 +15,37 @@ The following API operations were covered:
 - DELETE – Delete user
 
 ## Testing Approach
-Testing was performed manually using Postman by executing API requests and verifying responses against expected outcomes.
+Testing was performed manually using Postman by sending requests and validating the returned responses.
 
-The validation focused on:
-- Status codes (200, 201, 204, 401, 404)
-- Response body structure and data correctness
-- Handling of negative and invalid inputs
+The validation covered:
+- Status codes
+- Response body correctness
+- Negative and invalid input handling
 - Basic response time checks
 
-Each test case was executed step-by-step and supported with screenshots as evidence.
+Each test case was executed step by step and supported with screenshots.
 
 ## Test Results
-- Total Test Cases: 15  
-- Passed: 13  
-- Failed: 2  
+- Total Test Cases: 15
+- Passed: 13
+- Failed: 2
 
 ## Key Observations
-- All GET and DELETE operations worked as expected.
-- POST and PUT requests were successful for valid inputs.
-- The API does not enforce strict input validation:
-  - Accepts missing required fields during user creation
-  - Accepts incorrect data types during update
+- GET and DELETE operations worked as expected.
+- Valid POST and PUT requests were processed successfully.
+- Input validation is limited in some cases.
 
 ## Issues Identified
-- Missing field validation is not enforced (POST)
-- Data type validation is not enforced (PUT)
+- API accepts missing required fields during user creation.
+- API accepts invalid data types during update.
 
-These behaviors are acceptable for a mock API but would be considered defects in a production system.
+These behaviors are acceptable for a mock API, but they would be defects in a production system.
 
 ## Repository Contents
-- Test case document  
-- Test case execution with screenshots  
-- Bug report  
-- Test summary report  
+- Test case document
+- Test execution document with screenshots
+- Bug report
+- Test summary report
 
 ## Tools Used
 - Postman
